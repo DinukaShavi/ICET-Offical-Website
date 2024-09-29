@@ -1,0 +1,875 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Institute Of Computer Engineering Technology </title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description"
+        content="Discover iCET, where aspiring software engineers gain hands-on skills for real-world success. Transform your future with practical software training">
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="./assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/61d60b83f4.js" crossorigin="anonymous"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/Favicon/favicon-16x16.png">
+    <link rel="manifest" href="/img/favicon/site.webmanifest">
+
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Roboto:wght@400;500;700;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="hero/lib/owlcarousel/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="hero/css/style.css" rel="stylesheet">
+    <style>
+        /* Custom Scrollbar CSS */
+        /* For WebKit browsers (Chrome, Safari) */
+        ::-webkit-scrollbar {
+            width: 12px;
+            height: 12px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: teal;
+        }
+
+        /* For Firefox */
+        * {
+            scrollbar-width: thin;
+            scrollbar-color: teal transparent;
+        }
+
+        /* Example content to enable scrolling */
+        .scrollable-content {
+            height: 300px;
+            overflow-y: scroll;
+            padding: 20px;
+            background: #fff;
+            border: 1px solid #ddd;
+        }
+
+        /* Hover effect with transition using ::before */
+        .nav-link {
+            position: relative;
+            display: inline-block;
+            font-family: sans-serif;
+            padding: 10px 5px;
+        }
+
+        .nav-link::before {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 2px;
+            left: 0;
+            bottom: 0;
+            background-color: #00ff7b;
+            transition: width 0.4s ease;
+        }
+
+        .nav-link:hover::before {
+            width: 100%;
+        }
+
+        /* Active link underline */
+        .nav-link.active::before {
+            width: 100%;
+        }
+
+        /* Ensure the navbar background and brand are styled properly */
+        .navbar-dark .navbar-brand img {
+            visibility: hidden;
+        }
+
+        .navbar-brand img.d-none.d-lg-block {
+            position: absolute;
+            z-index: 1;
+            visibility: visible;
+        }
+
+        .btn-custom {
+            background-color: #20c997;
+            color: white;
+        }
+
+        .text-custom {
+            color: #20c997;
+        }
+
+        .btn-custom:hover {
+            background-color: rgb(0, 0, 0);
+        }
+
+        .btn-watch {
+            background-color: white;
+            color: #20c997;
+        }
+
+        .btn-watch:hover {
+            background-color: #20c997;
+            color: white;
+        }
+
+        .btn-custom:hover {
+            background-color: #20c997;
+        }
+
+        .moreDetailsBtn:hover {
+            background-color: #02416e;
+            /* Slightly lighter shade */
+            color: #fff;
+            /* Text color on hover */
+        }
+
+        .moreDetailsBtn:hover i {
+            transform: translateX(5px);
+            /* Move the icon slightly on hover */
+            transition: transform 0.3s ease;
+            /* Smooth transition */
+        }
+
+        .owl-carousel .owl-nav .owl-prev,
+        .owl-carousel .owl-nav .owl-next {
+            background-color: teal;
+        }
+
+        .social-icons i {
+            color: rgb(48, 48, 48);
+            font-size: 20px;
+            gap: 15px;
+        }
+
+        /*** Service Start ***/
+
+        .service .service-item {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service .service-title {
+            position: relative;
+            margin-top: -30px;
+            text-align: center;
+            transition: 0.5s;
+        }
+
+        .service .service-title p {
+            text-align: center;
+            padding: 15px;
+            background: var(--bs-primary);
+            opacity: 0;
+            transition: 0.5s;
+            border-radius: 10px;
+        }
+
+        .service-item:hover .service-title p {
+            opacity: 1;
+        }
+
+        .service-item:hover img {
+            transform: scale(1.3);
+        }
+
+        .service-item img {
+            transition: 0.5s;
+            border-radius: 10px;
+            width: 100%;
+        }
+
+        .service-item:hover .service-title a.h4 {
+            opacity: 0;
+        }
+
+        /*** Service End ***/
+
+        .profile-card {
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            padding: 10px;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            transition: transform 0.4s;
+        }
+
+        .profile-card:hover {
+            transform: scale(1.03);
+        }
+
+        .img-border img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .social-icons a {
+            margin: 0 15px;
+            font-size: 20px;
+
+        }
+
+        /* The Video Modal (background) */
+        .video-modal {
+            display: none;
+            position: fixed;
+            z-index: 999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            /* Black background with opacity */
+        }
+
+        /* Modal Content (the video) */
+        .video-modal-content {
+            position: relative;
+            margin: auto;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 80%;
+            max-width: 900px;
+            padding: 20px;
+        }
+
+        /* The Close Button */
+        .close-video {
+            position: absolute;
+            top: 10px;
+            right: 25px;
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close-video:hover,
+        .close-video:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+
+    <title>Nav Bar with Transition</title>
+</head>
+
+<body>
+    <header class="fixed-top">
+
+        <!-- navbar -->
+        <nav class="navbar navbar-inverse navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand " aria-label="Smart path to start your software engineering career" href="./">
+                    <img src="img/iCETlogoBNW.png" class="px-2" width="60px" alt="">
+                </a>
+                <img src="assets/img/LOGO DESIGN.png" class="px-2 d-none d-lg-block" width="80px" alt="">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                    aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarText">
+                    <ul class="navbar-nav nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item me-3">
+                            <a class="nav-link active" aria-current="page" href="./"><b>Home</b></a>
+                        </li>
+                        <li class="nav-item me-3">
+                            <a class="nav-link" href="#"><b>About</b></a>
+                        </li>
+                        <li class="nav-item me-3">
+                            <a class="nav-link" href="#"><b>Courses</b></a>
+                        </li>
+                        <li class="nav-item me-3">
+                            <a class="nav-link" href="#"><b>Research and Innovation</b></a>
+                        </li>
+                        <li class="nav-item me-3">
+                            <a class="nav-link" href="#"><b>Contact Us</b></a>
+                        </li>
+                    </ul>
+                    <span class="navbar-text">
+                        <a href="#" target="_blank" class="btn btn-sm btn-success text-uppercase fw-light"><b>Student
+                                Portal</b></a>
+                    </span>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+
+    <div class="container-fluid position-relative p-0" style="margin-top: 35px;">
+        <!-- Carousel Start -->
+        <div class="header-carousel owl-carousel">
+            <!-- First Carousel Slide -->
+            <div class="header-carousel-item">
+                <img src="hero/img/slider-1.png" class="img-fluid w-100" alt="Image">
+                <div class="carousel-caption">
+                    <div class="container">
+                        <div class="row g-5">
+                            <div class="col-12 animated fadeInUp">
+                                <div class="text-center">
+                                    <h4 class="text-custom text-uppercase fw-bold mb-4">Welcome To ICET</h4>
+                                    <p class="mb-5 fs-5">Connecting Intelligence, Empowering Minds. Unlock Your True
+                                        Potential With Us.</p>
+                                    <div class="d-flex justify-content-center flex-shrink-0 mb-4">
+                                        <!-- First Watch Video Button -->
+                                        <a class="btn btn-watch rounded-pill py-3 px-4 px-md-5 me-2"
+                                            data-video="assets/video/0119.webm" href="#"><i class="fas fa-play-circle me-2"></i>
+                                            Watch Video</a>
+                                        <a class="btn btn-custom rounded-pill py-3 px-4 px-md-5 ms-2" href="#">Learn
+                                            More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Second Carousel Slide -->
+            <div class="header-carousel-item">
+                <img src="hero/img/slide-2c.jpg" class="img-fluid w-100" alt="Image">
+                <div class="carousel-caption">
+                    <div class="container">
+                        <div class="row gy-0 gx-5">
+                            <div class="col-lg-0 col-xl-5"></div>
+                            <div class="col-xl-7 animated fadeInLeft">
+                                <div class="text-sm-center text-md-end">
+                                    <h4 class="text-custom text-uppercase fw-bold mb-4">Welcome To ICET</h4>
+                                    <h1 class="display-4 text-uppercase text-white mb-4">Path to your <span
+                                            class="text-success">success</span></h1>
+                                    <p class="mb-5 fs-5">The world needs certified software developers, why not be one
+                                        yourself?</p>
+                                    <p class="mb-5 fs-5">Kickstart your career in the IT Software Industry Today. No
+                                        prior experience required.</p>
+                                    <div
+                                        class="d-flex justify-content-center justify-content-md-end flex-shrink-0 mb-4">
+                                        <!-- Second Watch Video Button -->
+                                        <a class="btn btn-watch rounded-pill py-3 px-4 px-md-5 me-2"
+                                            data-video="assets/video/2D-ani.mp4" href="#"><i class="fas fa-play-circle me-2"></i>
+                                            Watch Video</a>
+                                        <a class="btn btn-custom rounded-pill py-3 px-4 px-md-5 ms-2" href="#">Learn
+                                            More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Carousel End -->
+    </div>
+
+    <!-- Video Modal -->
+    <div id="videoModal" class="video-modal">
+        <div class="video-modal-content">
+            <span class="close-video">&times;</span>
+            <video id="videoPlayer" width="100%" controls>
+                <source id="videoSource" src="" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+
+    <!-- New section with image and paragraph -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-12 col-12 py-3 d-none d-lg-block">
+                <div data-aos="fade-up" data-aos-duration="2000">
+                    <img src="./assets/img/home_one.png" class="img-fluid"
+                        alt="Software Engineering Training Institute">
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12 col-12 py-3">
+                <p class="fs-3 text-orange">Bridge Your Intelligence to a Software Career: </p>
+                <h1 class="text-uppercase philosopher-regular" style="color:#233857; text-align:justify;">No Degree
+                    Required
+                </h1>
+                <p class="text-muted">
+                    At iCET, we firmly believe that the path to becoming a successful software engineer doesn't
+                    necessarily require a traditional degree.
+                    <br> Our programs are designed to provide individuals with the knowledge, skills, and practical
+                    experience needed to excel in the field of software engineering, regardless of their educational
+                    background.
+                    <br> We recognize that intelligence, passion, and dedication are far more important than a piece
+                    of paper, and our curriculum is tailored to unlock the full potential of every student,
+                    regardless of their academic history.
+                    <br>
+                    <b>Hands on Project Exposure: </b> We recognize that the traditional path to a software
+                    engineering career may not suit everyone. That's why we offer a dynamic approach that goes
+                    beyond the confines of traditional degree requirements.
+                    <br> Through hands-on projects, immersive real-world experiences, and personalized guidance from
+                    industry professionals, we mentor individuals to develop the skills and confidence needed to
+                    thrive in the software engineering field.
+                    <br> With iCET, you can start your software engineering journey knowing that your success is
+                    determined by your passion, dedication, and ability to adapt, rather than by traditional
+                    academic credentials alone.
+                    <br> Our programs are designed to guide students from all backgrounds to pursue a career in
+                    software engineering with confidence and competence, setting them on a path to success in this
+                    rapidly evolving industry.
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="text-center my-5">
+        <small class="text-muted"> MEET OUR TEACHERS AND ADMINISTRATORS </small><br>
+        <p class="fs-1">PANEL OF EXPERT LECTURERS</p>
+    </div>
+    <div class="container mt-5">
+        <div class="row">
+
+            <!-- Niroth sir Profile Card -->
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="profile-card">
+                    <div class="img-border"><img src="assets/img/drniroth.webp" alt="Dr. Niroth Samarawikrama"></div>
+                    <div class="green-line"></div>
+                    <div class="card-body">
+                        <h5>Dr. Niroth Samarawikrama</h5>
+                        <p><b>BSc in Applied Science,</b><br>University of Rajarata.</p>
+                        <p><b>Postgraduate Dip in Computer Science,</b><br>University of Colombo.</p>
+                        <p><b>MSc in Information Technology,</b><br>University of Colombo.</p>
+                        <p><b>PhD in Computer Science,</b><br>University of Memphis (USA).</p>
+                    </div>
+                    <div class="card-footer">
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Frank sir Profile Card -->
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="profile-card">
+                    <div class="img-border"><img src="assets/img/frank.webp" alt="Frank Damiand"></div>
+                    <div class="green-line"></div>
+                    <div class="card-body">
+                        <h5>Frank Damiand</h5>
+                        <p><b>Technical Lead / Engineering Manager,</b><br>Sysco Labs.</p>
+                        <p><b>MSc in Software Engineering,</b><br>Kingston University(UK).</p><br><br>
+
+                    </div>
+                    <div class="card-footer" style="margin-top: 78px;">
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- sharada sir Profile Card -->
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="profile-card">
+                    <div class="img-border"><img src="assets/img/sarada.jpg" alt="Sharada Marasinghe"></div>
+                    <div class="green-line"></div>
+                    <div class="card-body">
+                        <h5>Sharada Marasinghe</h5>
+                        <p><b>Bachelor of Information Technology,</b><br>University Of Colombo (UG).</p>
+                        <p><b>Diploma in Software Engineering.</b></p><br><br><br>
+
+                    </div>
+                    <div class="card-footer" style="margin-top: 100px;">
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dewmini miss Profile Card -->
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="profile-card">
+                    <div class="img-border"><img src="assets/img/prathiba.webp" alt="Dewmini Weerasinghe"></div>
+                    <div class="green-line"></div>
+                    <div class="card-body">
+                        <h5>Dewmini Weerasinghe</h5>
+                        <p><b>Bachelor of Information Technology,</b><br>University of Colombo (UG) .</p>
+                        <p><b>Diploma in IT and Software Development,</b><br>LTC Campus.</p>
+                        <p><b>Diploma in Teaching,</b><br>Lyceum Campus.</p><br>
+
+                    </div>
+                    <div class="card-footer" style="margin-top: 35px;">
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row align-items-center" style="min-height: 600px;">
+            <!-- Image Section for ICM -->
+            <div class="col-lg-6 col-md-12 bg-white d-flex justify-content-center align-items-center"
+                style="padding-left: 50px;">
+                <div data-aos="fade-up" data-aos-duration="2000">
+                    <img src="./assets/img/icm.png" class="img-fluid"
+                        style="max-width: 80%; height: auto; margin-left: 90px;" alt="ICM - IT Certified Manager">
+                </div>
+            </div>
+            <!-- Text Section for ICM -->
+            <div class="col-lg-6 col-md-12 g-0"
+                style="background-color: #fbfcfc; padding-top: 65px; padding-left: -150px; padding-right: 90px;">
+                <div class="m-5 text-dark pb-4 text-center pl-0">
+                    <h4 class="philosopher-bold fs-4">ICM - IT Certified Master</h4>
+                    <hr>
+                    <p style="text-align: justify;">
+                        ICM – IT Certified Manager is a highly valued certification for IT professionals looking to
+                        advance into management positions. This program is designed for IT graduates, professionals
+                        with experience in the field, and those aspiring to enhance their management skills. The ICM
+                        certification offers both online and in-person learning options, providing flexibility for
+                        professionals who are currently employed. The program equips participants with project
+                        management skills, strategic planning, and leadership skills required to excel in the IT
+                        industry. By completing the ICM certification, candidates become proficient in managing IT
+                        projects and teams effectively. If you're aiming to transition into IT management, the ICM
+                        - IT Certified Manager certification is your best choice.
+                    </p>
+                    <a class="btn btn-success moreDetailsBtn rounded-pill py-3 px-3 px-md-5 ms-2" href=""
+                        aria-label="IT Certified Manager" style="background-color: #01304e; font-weight: 300;">
+                        MORE DETAILS
+                        <i class="ms-3 pt-1 fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-md-12 my-2">
+                <h3 class="text-uppercase philosopher-regular pt-3 fw-bolder"
+                    style="color:#233857; text-align:justify;">Hear From Our Students</h3>
+            </div>
+            <div class="col-md-3 text-center my-3">
+                <iframe width="306" height="175" src="https://www.youtube.com/embed/PdOe-WEAqC8" loading="lazy"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="col-md-3 text-center my-3">
+                <iframe width="306" height="175" src="https://www.youtube.com/embed/SGTEpfeS4Ks" loading="lazy"
+                    title="𝟕 𝐌𝐨𝐧𝐭𝐡𝐬, 𝟏 𝐃𝐫𝐞𝐚𝐦: 𝐍𝐨𝐚𝐡 𝐒𝐡𝐚𝐧&#39;𝐬 𝐐𝐮𝐢𝐜𝐤 𝐑𝐢𝐬𝐞 𝐭𝐨 𝐒𝐨𝐟𝐭𝐰𝐚𝐫𝐞 𝐃𝐞𝐯𝐞𝐥𝐨𝐩𝐞𝐫."
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="col-md-3 text-center my-3">
+                <iframe width="306" height="175" src="https://www.youtube.com/embed/jmy-bVBOnfM" loading="lazy"
+                    title="Meet Nuwin Winwath,  who&#39;s paving his way to success with iCET!" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="col-md-3 text-center my-3">
+                <iframe width="306" height="175" src="https://www.youtube.com/embed/FvYG8t1w7xM" loading="lazy"
+                    title="Meet Thisuka Mahiru, who&#39;s paving his way to success with iCET!" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="col-md-3 text-center my-3">
+                <iframe width="306" height="175" src="https://www.youtube.com/embed/U675GxHYuWo" loading="lazy"
+                    title="Meet Akindu Ramsith, who&#39;s paving his way to success with iCET!" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="col-md-3 text-center my-3">
+                <iframe width="306" height="175" src="https://www.youtube.com/embed/xJQdTqDNfGo" loading="lazy"
+                    title="Meet Sethum Vidmal, who&#39;s paving his way to success with iCET!" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="col-md-3 text-center my-3">
+                <iframe width="306" height="175" src="https://www.youtube.com/embed/JUVut7xkMCk" loading="lazy"
+                    title="Meet Havindu Hesara, who&#39;s paving his way to success with iCET!" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="col-md-3 text-center my-3">
+                <iframe width="306" height="175" src="https://www.youtube.com/embed/nTsChBblxyk" loading="lazy"
+                    title="Janith&#39;s journey from QS degree to full-stack Developer" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row align-items-center" style="min-height: 600px;">
+            <!-- Text Section for iCD -->
+            <div class="col-lg-6 col-md-12 g-0" style="background-color: #fbfcfc;">
+                <div class="m-5 text-dark pb-4 text-center">
+                    <h1 class="philosopher-bold fs-4">iCD - iCET Certified Developer</h1>
+                    <hr style="margin-left: 90px;">
+                    <p style="text-align: justify; margin-left: 90px;">
+                        iCD – iCET Certified Developer is a comprehensive program that is designed to prepare
+                        individuals for a professional career in the IT Software Industry. The course is targeted
+                        towards IT graduates, non-IT graduates or professionals and anyone who is currently
+                        employed and looking to start or improve their career in the IT Software Industry. iCD is
+                        available in two modes, online and physical learning. The online option allows students to
+                        complete the program virtually under the guidance of a panel of esteemed lecturers. The
+                        physical learning option offers students the opportunity to learn and interact with lecturers
+                        and peers in our sophisticated labs. Upon completion of the iCD certification, students will
+                        be equipped with analytical skills, design skills and the ability to implement practical
+                        self-projects resulting in them being 100% industry ready. If you’re looking to start or
+                        improve your career in the IT Software Industry, the iCD - iCET Certified Developer Program
+                        is the best choice for you.
+                    </p>
+                    <a class="btn btn-success moreDetailsBtn rounded-pill py-3 px-3 px-md-5 ms-2" href=""
+                        aria-label="iCET Certified Developer" style="background-color: #01304e; font-weight: 300;">
+                        MORE DETAILS
+                        <i class="ms-3 pt-1 fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            <!-- Image Section for iCD with Same Transition -->
+            <div class="col-lg-6 col-md-12 bg-white d-flex justify-content-center align-items-center">
+                <div data-aos="fade-up" data-aos-duration="2000">
+                    <img src="./assets/img/icd.png" class="img-fluid" style="max-width: 80%; height: auto;"
+                        alt="Software Engineering Sri Lanka">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- staff -->
+    <footer class="text-center text-lg-start bg-body-tertiary text-muted">
+        <!-- Section: Social media -->
+        <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+            <!-- Left -->
+            <div class="me-5 d-none d-lg-block">
+                <span>Connect with our Social Networks</span>
+            </div>
+            <!-- Left -->
+
+            <!-- Right -->
+            <div class="font-size" style="font-size: 2rem;">
+                <a href="https://facebook.com/iCETSriLanka" class="me-4 text-reset" target="_blank">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.icet.lk/" class="me-4 text-reset" target="_blank">
+                    <i class="fab fa-google"></i>
+                </a>
+                <a href="https://instagram.com/icet_srilanka/?hl=en" class="me-4 text-reset" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://linkedin.com/company/institute-of-computer-engineering-technology-icet"
+                    class="me-4 text-reset" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://www.youtube.com/@instituteofcomputerengineering" class="me-4 text-reset"
+                    target="_blank">
+                    <i class="fab fa-youtube"></i>
+                </a>
+            </div>
+            <!-- Right -->
+        </section>
+        <!-- Section: Social media -->
+
+        <!-- Section: Links  -->
+        <section>
+            <div class="container text-center text-md-start mt-5">
+                <!-- Grid row -->
+                <div class="row mt-3">
+                    <!-- Logo and Text -->
+                    <div class="col-md-4 d-flex align-items-center mb-4">
+                        <img src="assets/img/LOGO DESIGN.png" alt="Company Logo" class="img-fluid"
+                            style="max-height: 180px; margin-right: 20px;">
+                        <p class="text-start">
+                            At iCET, we believe in the power of education to transform lives and uplift communities.
+                            That's why we are committed to our social responsibility initiatives, striving to make a
+                            positive impact beyond the realm of software education. We are dedicated to contributing to
+                            the betterment of society. Join us as we work towards a brighter future for all.
+                        </p>
+                    </div>
+
+                    <!-- Information Column -->
+                    <div class="col-md-2 col-lg-2 mb-4">
+                        <h6 class="text-uppercase fw-bold mb-4">Information</h6>
+                        <p><a href="#!" class="text-reset">Home</a></p>
+                        <p><a href="#!" class="text-reset">About Us</a></p>
+                        <p><a href="#!" class="text-reset">iCET Certified Master</a></p>
+                        <p><a href="#!" class="text-reset">iCET Certified Developer</a></p>
+                    </div>
+
+                    <!-- Student Life Column -->
+                    <div class="col-md-2 col-lg-2 mb-4">
+                        <h6 class="text-uppercase fw-bold mb-4">Student Life</h6>
+                        <p><a href="#!" class="text-reset">Research</a></p>
+                        <p><a href="#!" class="text-reset">Innovations</a></p>
+                        <p><a href="#!" class="text-reset">Events</a></p>
+                        <p><a href="#!" class="text-reset">Blogs</a></p>
+                    </div>
+
+                    <!-- Contact Column -->
+                    <div class="col-md-4 col-lg-3 mb-md-0 mb-4">
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            <i class="fas fa-map-marker-alt me-2"></i> Location
+                        </h6>
+                        <div class="google-maps">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3962.3875279493677!2d79.90491717475508!3d6.722477893273514!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae247a4c04ae595%3A0x4060e3527ce41470!2siCET%20-%20Institute%20of%20Computer%20Engineering%20Technology!5e0!3m2!1ssi!2slk!4v1727282871390!5m2!1ssi!2slk"
+                                width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+                <!-- Grid row -->
+            </div>
+        </section>
+        <!-- Section: Links  -->
+
+        <!-- Copyright -->
+        <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+            © 2024 Copyright:
+            <a class="text-reset fw-bold" href="https://www.icet.lk/">ICET</a>
+        </div>
+        <!-- Copyright -->
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-dark btn-lg-square back-to-top"><i class="fa fa-arrow-up"></i></a>
+    </footer>
+
+
+    <!-- Footer -->
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./assets/js/bootstrap.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <script>
+        AOS.init();
+    </script>
+    <!-- <script src="./assets/js/financial-aid.js"></script> -->
+    <script>
+        $("li").hover(
+            function () {
+                $(this).find("span").stop().animate({
+                    width: "100%",
+                    opacity: "1",
+                }, 1000, function () { })
+            },
+            function () {
+                $(this).find("span").stop().animate({
+                    width: "0%",
+                    opacity: "0",
+                }, 1000, function () { })
+            }
+        );
+        $(document).ready(function () {
+            $("#alphaB").click(function () {
+                $("#alpha").toggle();
+                if ($(this).text() == "+ Read More") {
+                    $(this).text("- Collapse");
+                } else {
+                    $(this).text("+ Read More");
+                }
+            });
+        });
+        $(document).ready(function () {
+            $("#industryB").click(function () {
+                $("#industry").toggle();
+                if ($(this).text() == "+ Read More") {
+                    $(this).text("- Collapse");
+                } else {
+                    $(this).text("+ Read More");
+                }
+            });
+        });
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script>
+
+
+
+        // Hero Header carousel
+        $(".header-carousel").owlCarousel({
+            animateOut: 'fadeOut',
+            items: 1,
+            margin: 0,
+            stagePadding: 0,
+            autoplay: true,
+            smartSpeed: 500,
+            dots: true,
+            loop: true,
+            nav: true,
+            navText: [
+                '<i class="bi bi-arrow-left"></i>',
+                '<i class="bi bi-arrow-right"></i>'
+            ],
+        });
+
+        document.querySelectorAll('.service-content a').forEach(link => {
+            link.style.textDecoration = 'none';
+        });
+
+        // Get modal elements
+        const videoModal = document.getElementById('videoModal');
+        const videoPlayer = document.getElementById('videoPlayer');
+        const videoSource = document.getElementById('videoSource');
+        const closeVideo = document.querySelector('.close-video');
+
+        // Watch Video Button functionality for multiple videos
+        document.querySelectorAll('.btn-watch').forEach(button => {
+            button.addEventListener('click', function (e) {
+                e.preventDefault();
+                const videoFile = this.getAttribute('data-video');
+                videoSource.src = videoFile; // Set the correct video file based on the button
+                videoPlayer.load(); // Reload video with new source
+                videoModal.style.display = 'block';
+                videoPlayer.play();
+            });
+        });
+
+        // Close Modal Button
+        closeVideo.addEventListener('click', function () {
+            closeModal();
+        });
+
+        // Close modal when clicking outside of the video content
+        window.addEventListener('click', function (e) {
+            if (e.target === videoModal) {
+                closeModal();
+            }
+        });
+
+        // Function to close the modal and reset the video
+        function closeModal() {
+            videoModal.style.display = 'none';
+            videoPlayer.pause();
+            videoPlayer.currentTime = 0; // Reset video
+        }
+    </script>
+
+
+</html>
