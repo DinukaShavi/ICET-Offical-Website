@@ -11,16 +11,24 @@
     <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../img/Favicon/favicon-16x16.png">
     <link rel="manifest" href="./img/favicon/site.webmanifest">
-
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="../assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@200;300;400;500;600&display=swap"
+        rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
-    <!-- Template Stylesheet -->
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="./css/about/bootstrap.min.css" rel="stylesheet">
     <link href="../assets/css/style.css" rel="stylesheet">
+
     <style>
         /* Hover effect with transition using ::before */
         .nav-link {
@@ -87,20 +95,49 @@
             border: 1px solid #ddd;
         }
 
-        .btn-custom {
-            background-color: #20c997;
-            color: white;
+        .rounded-circle-bottom {
+            border-top-right-radius: 300px;
+            border-top-left-radius: 300px;
+            margin-bottom: -7px;
         }
 
-        .text-custom {
-            color: #20c997;
+        .info-icon {
+            color: #39B54A !important;
         }
 
-        .btn-custom:hover {
-            background-color: rgb(0, 0, 0);
-            color: white;
+        .custom-text {
+            color: #1a4a82;
+            font-weight: bold;
+        }
+
+        .phone-info span {
+            font-size: 22px;
+            font-weight: bold;
+            color: #39B54A !important;
+        }
+
+        .fa-check-circle {
+            color: #39B54A !important;
+        }
+
+        .fa-phone-alt {
+            color: #1a4a82;
+        }
+
+        .fa-globe,
+        .fa-chalkboard-teacher {
+            color: #1a4a82;
+        }
+
+        .icon-section h5 {
+            margin-left: 10px;
+        }
+
+        .info-section p {
+            color: #1a4a82;
         }
     </style>
+
 </head>
 
 <body>
@@ -120,10 +157,10 @@
                 <div class="collapse navbar-collapse" id="navbarText">
                     <ul class="navbar-nav nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item me-3">
-                            <a class="nav-link" aria-current="page" href="../index.html"><b>Home</b></a>
+                            <a class="nav-link" aria-current="page" href="../"><b>Home</b></a>
                         </li>
                         <li class="nav-item me-3">
-                            <a class="nav-link" href="../pages/about.html"><b>About</b></a>
+                            <a class="nav-link active" href="../pages/about.html"><b>About</b></a>
                         </li>
                         <li class="nav-item me-3">
                             <a class="nav-link" href="../pages/blogs.html"><b>Blogs</b></a>
@@ -132,7 +169,7 @@
                             <a class="nav-link" href="#"><b>Research and Innovation</b></a>
                         </li>
                         <li class="nav-item me-3">
-                            <a class="nav-link active" href="./contact-us.html"><b>Contact Us</b></a>
+                            <a class="nav-link" href="../pages/contact.html"><b>Contact Us</b></a>
                         </li>
                     </ul>
                     <span class="navbar-text">
@@ -144,95 +181,79 @@
         </nav>
 
     </header>
-    <div class="container"></div>
-    <div class="mt-5">
-        <br> <br>
-    </div>
-    </div>
-    <div class="container my-4 text-center">
-        <h1 class="text-uppercase">Contact Us</h1>
-        <hr class="w-25 mx-auto">
-    </div>
-    <!-- Contact Start -->
-    <div class="container-fluid contact py-5 contact-container d-flex justify-content-center align-items-center"
-        style="min-height: 100vh; padding-left: 50px; margin-top: -80px;">
-        <div class="container py-5 contact-content">
-            <div class="row g-5 d-flex justify-content-center align-items-center">
-                <div class="col-md-5 py-5 gt-th d-flex flex-column justify-content-center align-items-center"
-                    style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(234, 232, 243, 0.8)), url('./assets/img/StudentFriendlyCulture.webp');">
-                    <img src="./assets/img/logo.ico" class="img-fluid mx-auto my-5" width="200" alt="Training Program">
-                    <h5 class="mt-5 text-center">WE GO BEYOND.</h5>
-                    <h5 class="mt-4 text-center">FOLLOW:</h5>
-                    <p class="fs-3 text-center">
-                        <a class="text-light" target="_blank" href="https://www.facebook.com/icet"><img
-                                src="./assets/img/square-facebook.svg" alt="" width="30px" height="30px"
-                                class="pe-1 d-inline"></a>
-                        <a class="text-light" target="_blank" href="https://www.youtube.com/icet"><img
-                                src="./assets/img/square-youtube.svg" alt="" width="30px" height="30px"
-                                class="pe-1 d-inline"></a>
-                    </p>
-                    <p class="mt-5 text-center">
-                        <img src="https://icecgulf.com/icon/phone-solid.svg" width="20px" height="20px"
-                            class="mb-1 mx-auto d-inline" alt="Icet"> <a href="tel:+94705805805"
-                            style="text-decoration:none;" class="middle-a ms-3 text-light d-inline"> +94 705 805 805
-                            &nbsp;
-                            &nbsp; &nbsp;&nbsp; &nbsp; </a>
-                    </p>
-                    <p class="mt-5 text-center">
-                        <img src="https://icecgulf.com/icon/envelope-solid.svg" width="20px" height="20px"
-                            class="mb-1 d-inline mx-auto" alt="ICEC GULF"> &nbsp; &nbsp; info@icet.lk &nbsp;&nbsp;
-                        &nbsp;
-                    </p>
-                </div>
 
-                <div class="col-xl-6">
-                    <div class="wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="bg-light p-5 rounded h-100 wow fadeInUp" data-wow-delay="0.2s">
-                            <h4 class="text-custom">Send Your Message</h4>
-                            <p class="mb-4">Got questions? We’d love to hear from you. Send us a message and we will
-                                respond to you as soon as possible.</p>
-                            <form action="send_email.php" method="POST">
-                                <div class="row g-4">
-                                    <div class="col-lg-12 col-xl-6">
-                                        <div class="form-floating">
-                                            <input type="text" class="form-control border-0" id="name" name="name"
-                                                placeholder="Your Name">
-                                            <label for="name">Name</label>
-                                        </div>
+    <!-- About Start -->
+    <div class="container-fluid overflow-hidden py-5">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-xl-5 wow fadeInLeft" data-wow-delay="0.1s">
+                    <div class="bg-light rounded">
+                        <img src="./assets/img/students-in-library.jpg" class="img-fluid w-100"
+                            style="margin-bottom: -7px;" alt="Image">
+                        <img src="./assets/img/learning_student.jpg"
+                            class="img-fluid w-100 border-bottom border-5 border-primary"
+                            style="border-top-right-radius: 300px; border-top-left-radius: 300px;" alt="Image">
+                    </div>
+                </div>
+                <div class="col-xl-7 wow fadeInRight" data-wow-delay="0.3s">
+                    <h1 class="display-5 mb-4">About Us</h1>
+                    <p class="mb-4">Welcome to iCET, the Institute of Computer Engineering Technology, where we are
+                        dedicated to shaping aspiring individuals into skilled software engineers, equipping them with
+                        the expertise and knowledge needed to excel in the dynamic world of software development.
+
+                        At iCET, we understand the ever-evolving demands of the software industry. That's why we've
+                        designed an intensive and comprehensive training program that transforms enthusiastic learners
+                        into proficient software engineers in just few months.
+
+                        Dr. Niroth Samarawickckrama, our esteemed software engineering trainer, brings a wealth of
+                        knowledge and experience to our institute. With a deep passion for software engineering and a
+                        commitment to teaching, Dr. Samarawickckrama is the driving force behind our success. His
+                        guidance and expertise ensure that our students receive the finest education in the field.
+                    </p>
+                    <div class="row gy-4 align-items-center">
+                        <div class="col-12 col-sm-6 d-flex align-items-center">
+                            <i class="fas fa-chalkboard-teacher fa-3x text-secondary"></i>
+                            <h5 class="ms-4">
+                                <span class="counter-up" data-toggle="counter-up">20</span>+ Years of Expertise In
+                                Software Industry
+                            </h5>
+                        </div>
+                        <div class="col-12 col-sm-6 d-flex align-items-center">
+                            <i class="fas fa-globe fa-3x text-secondary"></i>
+                            <h5 class="ms-4">
+                                <span class="counter-up" data-toggle="counter-up">130</span>00+ Global Software
+                                Developers
+                            </h5>
+                        </div>
+                        <div class="col-8 col-md-9 mb-5">
+                            <p class="text-primary h6 mb-3"><i class="fa fa-check-circle text-secondary me-2"></i> 12
+                                months fast-track mastery course</p>
+                            <p class="text-primary h6 mb-3"><i class="fa fa-check-circle text-secondary me-2"></i> 6
+                                months industrial training</p>
+                            <p class="text-primary h6 mb-3"><i class="fa fa-check-circle text-secondary me-2"></i>
+                                Industry Placement</p>
+                            <p class="text-primary h6 mb-3"><i class="fa fa-check-circle text-secondary me-2"></i>
+                                Degree</p>
+                            <div class="d-flex flex-wrap align-items-center">
+                                <a id="phone-tada" href="" class="position-relative wow tada me-4">
+                                    <i class="fa fa-phone-alt text-primary fa-3x"></i>
+                                    <div class="position-absolute" style="top: 0; left: 25px;">
+                                        <span><i class="fa fa-comment-dots text-secondary"></i></span>
                                     </div>
-                                    <div class="col-lg-12 col-xl-6">
-                                        <div class="form-floating">
-                                            <input type="email" class="form-control border-0" id="email" name="email"
-                                                placeholder="Your Email">
-                                            <label for="email">Email</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <div class="form-floating">
-                                            <input type="text" class="form-control border-0" id="subject" name="subject"
-                                                placeholder="Subject">
-                                            <label for="subject">Subject</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <div class="form-floating">
-                                            <textarea class="form-control border-0" placeholder="Leave a message here"
-                                                id="message" name="message" style="height: 160px"></textarea>
-                                            <label for="message">Message</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <button class="btn btn-custom w-100 py-3" type="submit">Send Message</button>
-                                    </div>
+                                </a>
+                                <div class="d-flex flex-column justify-content-center">
+                                    <span class="text-primary">Have any questions?</span>
+                                    <span class="text-secondary fw-bold fs-5"
+                                        style="letter-spacing: 2px;">0705 805 805</span>
                                 </div>
-                            </form>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Contact End -->
+
     <footer class="text-center text-lg-start bg-body-tertiary text-muted">
         <!-- Section: Social media -->
         <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
@@ -243,7 +264,7 @@
             <!-- Left -->
 
             <!-- Right -->
-            <div class="font-size" style="font-size: 2rem;">
+            <div class="font-size">
                 <a href="https://facebook.com/iCETSriLanka" class="me-4 text-reset" target="_blank">
                     <i class="fab fa-facebook-f"></i>
                 </a>
@@ -327,6 +348,33 @@
         </div>
     </footer>
 
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script>
+        new WOW().init();
+
+        // Sticky Navbar
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 45) {
+                $('.nav-bar').addClass('sticky-top shadow-sm');
+            } else {
+                $('.nav-bar').removeClass('sticky-top shadow-sm');
+            }
+        });
+
+        // Facts counter
+        $('[data-toggle="counter-up"]').counterUp({
+            delay: 5,
+            time: 2000
+        });
+
+    </script>
 </body>
 
 </html>
