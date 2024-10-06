@@ -267,12 +267,44 @@
         .service-item:hover .service-img img {
             transform: none;
         }
+
+        #banner {
+            position: fixed;
+            top: 100px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
+            max-width: 800px;
+            display: none;
+            z-index: 1000;
+            background-color: transparent;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        #banner img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        #closeBanner {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            background: none;
+            border: none;
+            font-size: 24px;
+            font-weight: bold;
+            color: black;
+            cursor: pointer;
+        }
     </style>
 
-    <title>Nav Bar with Transition</title>
 </head>
 
 <body>
+
     <header class="fixed-top">
 
         <!-- navbar -->
@@ -313,6 +345,12 @@
         </nav>
 
     </header>
+
+    <!-- The banner image -->
+    <div id="banner">
+        <button id="closeBanner">&times;</button> <!-- Cross icon for closing -->
+        <img src="assets/img/intake.jpeg" alt="Website Banner"> <!-- Replace with the actual banner image -->
+    </div>
 
     <div class="container-fluid position-relative p-0" style="margin-top: 35px;">
         <!-- Carousel Start -->
@@ -468,7 +506,7 @@
                     <div class="img-border"><img src="assets/img/frank.webp" alt="Frank Damiand"></div>
                     <div class="green-line"></div>
                     <div class="card-body">
-                        <h5>Frank Damiand</h5>
+                        <h5>Mr. Frank Damiand</h5>
                         <p><b>Technical Lead / Engineering Manager,</b><br>Sysco Labs.</p>
                         <p><b>MSc in Software Engineering,</b><br>Kingston University(UK).</p><br><br>
 
@@ -489,7 +527,7 @@
                     <div class="img-border"><img src="assets/img/sarada.jpg" alt="Sharada Marasinghe"></div>
                     <div class="green-line"></div>
                     <div class="card-body">
-                        <h5>Sharada Marasinghe</h5>
+                        <h5>Mr. Sharada Marasinghe</h5>
                         <p><b>Bachelor of Information Technology,</b><br>University Of Colombo (UG).</p>
                         <p><b>Diploma in Software Engineering.</b></p><br><br><br>
 
@@ -510,7 +548,7 @@
                     <div class="img-border"><img src="assets/img/prathiba.webp" alt="Dewmini Weerasinghe"></div>
                     <div class="green-line"></div>
                     <div class="card-body">
-                        <h5>Dewmini Weerasinghe</h5>
+                        <h5>Mrs. Dewmini Weerasinghe</h5>
                         <p><b>Bachelor of Information Technology,</b><br>University of Colombo (UG) .</p>
                         <p><b>Diploma in IT and Software Development,</b><br>LTC Campus.</p>
                         <p><b>Diploma in Teaching,</b><br>Lyceum Campus.</p><br>
@@ -556,8 +594,9 @@
                         projects and teams effectively. If you're aiming to transition into IT management, the ICM
                         - IT Certified Manager certification is your best choice.
                     </p>
-                    <a class="btn btn-success moreDetailsBtn rounded-pill py-3 px-3 px-md-5 ms-2" href="./courses/icm.html"
-                        aria-label="IT Certified Manager" style="background-color: #01304e; font-weight: 300;">
+                    <a class="btn btn-success moreDetailsBtn rounded-pill py-3 px-3 px-md-5 ms-2"
+                        href="./courses/icm.html" aria-label="IT Certified Manager"
+                        style="background-color: #01304e; font-weight: 300;">
                         MORE DETAILS
                         <i class="ms-3 pt-1 fa-solid fa-arrow-right"></i>
                     </a>
@@ -645,8 +684,9 @@
                         improve your career in the IT Software Industry, the iCD - iCET Certified Developer Program
                         is the best choice for you.
                     </p>
-                    <a class="btn btn-success moreDetailsBtn rounded-pill py-3 px-3 px-md-5 ms-2" href="./courses/icd.html"
-                        aria-label="iCET Certified Developer" style="background-color: #01304e; font-weight: 300;">
+                    <a class="btn btn-success moreDetailsBtn rounded-pill py-3 px-3 px-md-5 ms-2"
+                        href="./courses/icd.html" aria-label="iCET Certified Developer"
+                        style="background-color: #01304e; font-weight: 300;">
                         MORE DETAILS
                         <i class="ms-3 pt-1 fa-solid fa-arrow-right"></i>
                     </a>
@@ -739,7 +779,7 @@
         </div>
     </div>
     <!-- Reasons to Join Us End -->
-     
+
     <!-- staff -->
     <footer class="text-center text-lg-start bg-body-tertiary text-muted">
         <!-- Section: Social media -->
@@ -794,10 +834,10 @@
                     <!-- Information Column -->
                     <div class="col-md-2 col-lg-2 mb-4">
                         <h6 class="text-uppercase fw-bold mb-4">Information</h6>
-                        <p><a href="#!" class="text-reset">Home</a></p>
-                        <p><a href="#!" class="text-reset">About Us</a></p>
-                        <p><a href="#!" class="text-reset">iCET Certified Master</a></p>
-                        <p><a href="#!" class="text-reset">iCET Certified Developer</a></p>
+                        <p><a href="../" class="text-reset">Home</a></p>
+                        <p><a href="./pages/about.html" class="text-reset">About Us</a></p>
+                        <p><a href="./courses/icm.html" class="text-reset">iCET Certified Master</a></p>
+                        <p><a href="./courses/icd.html" class="text-reset">iCET Certified Developer</a></p>
                     </div>
 
                     <!-- Student Life Column -->
@@ -805,8 +845,8 @@
                         <h6 class="text-uppercase fw-bold mb-4">Student Life</h6>
                         <p><a href="#!" class="text-reset">Research</a></p>
                         <p><a href="#!" class="text-reset">Innovations</a></p>
-                        <p><a href="#!" class="text-reset">Events</a></p>
-                        <p><a href="#!" class="text-reset">Blogs</a></p>
+                        <p><a href="./pages/blogs.html" class="text-reset">Events</a></p>
+                        <p><a href="./pages/blogs.html" class="text-reset">Blogs</a></p>
                     </div>
 
                     <!-- Contact Column -->
@@ -831,7 +871,7 @@
         <!-- Copyright -->
         <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
             © 2024 Copyright:
-            <a class="text-reset fw-bold" href="https://www.icet.lk/">ICET</a>
+            <a class="text-reset fw-bold" href="">ICET</a>
         </div>
         <!-- Copyright -->
         <!-- Back to Top -->
@@ -848,11 +888,11 @@
     <script src="./assets/js/bootstrap.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-
+    
     <script>
         AOS.init();
     </script>
-    <!-- <script src="./assets/js/financial-aid.js"></script> -->
+
     <script>
         $("li").hover(
             function () {
@@ -894,9 +934,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script>
 
-
-
-        // Hero Header carousel
         $(".header-carousel").owlCarousel({
             animateOut: 'fadeOut',
             items: 1,
@@ -917,43 +954,56 @@
             link.style.textDecoration = 'none';
         });
 
-        // Get modal elements
         const videoModal = document.getElementById('videoModal');
         const videoPlayer = document.getElementById('videoPlayer');
         const videoSource = document.getElementById('videoSource');
         const closeVideo = document.querySelector('.close-video');
 
-        // Watch Video Button functionality for multiple videos
         document.querySelectorAll('.btn-watch').forEach(button => {
             button.addEventListener('click', function (e) {
                 e.preventDefault();
                 const videoFile = this.getAttribute('data-video');
-                videoSource.src = videoFile; // Set the correct video file based on the button
-                videoPlayer.load(); // Reload video with new source
+                videoSource.src = videoFile;
+                videoPlayer.load();
                 videoModal.style.display = 'block';
                 videoPlayer.play();
             });
         });
 
-        // Close Modal Button
         closeVideo.addEventListener('click', function () {
             closeModal();
         });
 
-        // Close modal when clicking outside of the video content
         window.addEventListener('click', function (e) {
             if (e.target === videoModal) {
                 closeModal();
             }
         });
 
-        // Function to close the modal and reset the video
         function closeModal() {
             videoModal.style.display = 'none';
             videoPlayer.pause();
-            videoPlayer.currentTime = 0; // Reset video
+            videoPlayer.currentTime = 0;
         }
-    </script>
 
+        window.onload = function () {
+            var banner = document.getElementById('banner');
+            var closeButton = document.getElementById('closeBanner');
+
+            banner.style.display = 'block';
+
+            closeButton.onclick = function () {
+                banner.style.display = 'none';
+            };
+
+            document.addEventListener('click', function (event) {
+                var isClickInside = banner.contains(event.target);
+
+                if (!isClickInside) {
+                    banner.style.display = 'none';
+                }
+            });
+        };
+    </script>
 
 </html>
